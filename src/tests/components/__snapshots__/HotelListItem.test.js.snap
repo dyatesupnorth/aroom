@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render HotelListItem 1`] = `
+exports[`should render HotelListItem with hotel 1`] = `
 <div
   style={
     Object {
@@ -8,8 +8,21 @@ exports[`should render HotelListItem 1`] = `
     }
   }
 >
-  <h1>
-    HotelListItem
-  </h1>
+  <h2>
+    hotelone
+  </h2>
+  <p>
+    Star rating: 
+    5
+  </p>
+  <p>
+    Facilities:
+    <span>
+      car park
+    </span>
+    <span>
+      pool
+    </span>
+  </p>
 </div>
 `;
