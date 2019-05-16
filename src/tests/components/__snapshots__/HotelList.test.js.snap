@@ -8,8 +8,33 @@ exports[`should render HotelList 1`] = `
     }
   }
 >
-  <h1>
-    HotelList
-  </h1>
+  <HotelListItem
+    facilities={
+      Array [
+        "car park",
+        "pool",
+      ]
+    }
+    key="hotelone"
+    name="hotelone"
+    starRating={5}
+  />
+  <HotelListItem
+    facilities={
+      Array [
+        "car park",
+        "gym",
+      ]
+    }
+    key="hoteltwo"
+    name="hoteltwo"
+    starRating={3}
+  />
+  <HotelListItem
+    facilities={Array []}
+    key="hotelthree"
+    name="hotelthree"
+    starRating={3}
+  />
 </div>
 `;

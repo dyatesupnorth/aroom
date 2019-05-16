@@ -7,5 +7,5 @@ test("should set hotels", () => {
     hotels
   };
   const state = hotelsReducer(hotels, action);
-  expect(state).toEqual( hotels );
+  expect(state).toEqual(hotels);
 });

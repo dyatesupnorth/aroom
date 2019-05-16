@@ -1,7 +1,8 @@
 const hotelsReducerDefaultState = [];
+
 export default (state = hotelsReducerDefaultState, action) => {
   switch (action.type) {
-    case "SET_EXPENSES":
+    case "SET_HOTELS":
       return action.hotels;
     default:
       return state;
