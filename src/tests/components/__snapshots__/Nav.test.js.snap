@@ -9,7 +9,7 @@ exports[`should render HotelListItem 1`] = `
   }
 >
   <h1>
-    HotelListItem
+    Nav
   </h1>
 </div>
 `;

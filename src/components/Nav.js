@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 
-export class HotelListItem extends Component {
+export class Nav extends Component {
   render() {
     return (
       <div style={{ border: "1px solid tomato" }}>
-        <h1>HotelListItem</h1>
+        <h1>Nav</h1>
       </div>
     );
   }
 }
 
-export default HotelListItem;
+export default Nav;
