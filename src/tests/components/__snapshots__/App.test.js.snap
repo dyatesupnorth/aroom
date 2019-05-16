@@ -4,6 +4,9 @@ exports[`renders without crashing 1`] = `
 <div
   className="App"
 >
+  <Header />
+  <HomePageBanner />
+  <Filter />
   <ConnectFunction />
 </div>
 `;
