@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render HotelList 1`] = `
+exports[`should render HotelList correctly 1`] = `
 <div
   style={
     Object {
@@ -36,5 +36,19 @@ exports[`should render HotelList 1`] = `
     name="hotelthree"
     starRating={3}
   />
+</div>
+`;
+
+exports[`should render HotelList with no hotels correctly 1`] = `
+<div
+  style={
+    Object {
+      "border": "1px solid tomato",
+    }
+  }
+>
+  <p>
+    No hotels
+  </p>
 </div>
 `;
