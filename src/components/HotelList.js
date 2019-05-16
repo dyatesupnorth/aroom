@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-
+import { connect } from "react-redux";
+import { startGetHotels } from "../actions/hotels";
 export class HotelList extends Component {
   render() {
     return (
@@ -10,4 +11,16 @@ export class HotelList extends Component {
   }
 }
 
-export default HotelList;
+const mapDispatchToProps = dispatch => ({
+  startGetHotels: () => dispatch(startGetHotels())
+});
+
+const mapStateToProps = state => {
+  return {
+    hotels: state
+  };
+};
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(HotelList);

@@ -1,13 +1,11 @@
 import React from "react";
 import logo from "./logo.png";
 import "./App.css";
-
+import HotelList from "./components/HotelList";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} alt="logo" />
-      </header>
+      <HotelList />
     </div>
   );
 }
