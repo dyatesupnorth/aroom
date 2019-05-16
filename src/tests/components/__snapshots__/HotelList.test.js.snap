@@ -1,5 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`should handle HotelList with wrong hotels correctly 1`] = `
+<div
+  style={
+    Object {
+      "border": "1px solid tomato",
+    }
+  }
+>
+  <HotelListItem
+    notaHotel="notAHotel"
+  />
+</div>
+`;
+
 exports[`should render HotelList correctly 1`] = `
 <div
   style={

@@ -12,3 +12,5 @@ test("should render HotelList with no hotels correctly", () => {
   const wrapper = shallow(<HotelList hotels={[]} />);
   expect(wrapper).toMatchSnapshot();
 });
+
+
