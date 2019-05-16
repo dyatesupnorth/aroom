@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render HotelListItem 1`] = `
+<div>
+  <h1>
+    HotelListItem
+  </h1>
+</div>
+`;
