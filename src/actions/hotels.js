@@ -6,6 +6,8 @@ export const setHotels = hotels => ({
 
 export const startSetHotels = () => {
   return dispatch => {
-    return axios.get("data.json").then(res => console.log(res));
+    return axios.get("http://localhost:3001/hotels").then(res => 
+      dispatch(setHotels(res.data))
+      );
   };
 };
