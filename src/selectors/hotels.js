@@ -1,6 +1,6 @@
-
-export default (hotels) => {
+export default (hotels, {text}) => {
     return hotels.filter((hotel) => {
-        return hotel
-    })
+        const textMatch = hotel.name.toLowerCase().includes(text.toLowerCase());
+        return textMatch;
+    });
 }
