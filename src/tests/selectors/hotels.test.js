@@ -12,6 +12,8 @@ test('should filter by star rating', () => {
 
 // test('should filter by facilities', () => {
 //     const filters = {
+//         text: '',
+//         starRating: '',
 //         facilities: ["car park"]
 //     }
 //     const result = selectHotels(hotels, filters);
