@@ -1,4 +1,14 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Alt text](./src/logo.png "Logo")
+
+
+Tech test for [Laterooms](https://www.laterooms.com). This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+
+## Color Palette
+![Alt text](./ui-palette.png "UI Palette")
+
+## UI Mockup
+![Alt text](./ui-component-mockup.jpg "UI Component Mockup")
 
 ## Available Scripts
 
