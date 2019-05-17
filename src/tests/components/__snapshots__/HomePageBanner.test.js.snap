@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render HomePageBanner 1`] = `
+<Bootstrap(Jumbotron)
+  fluid={true}
+  style={
+    Object {
+      "backgroundImage": "url(https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80)",
+      "backgroundPosition": "center",
+      "backgroundRepeat": "no-repeat",
+      "backgroundSize": "cover",
+      "minHeight": "30rem",
+    }
+  }
+>
+  <h2
+    className="mt-3 text-white"
+  >
+    Welcome to ARoom
+  </h2>
+</Bootstrap(Jumbotron)>
+`;

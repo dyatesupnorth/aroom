@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Header 1`] = `
+<Bootstrap(undefined)
+  bg="dark"
+  expand="lg"
+>
+  <NavbarBrand
+    href="#home"
+  >
+    <img
+      alt="React Bootstrap logo"
+      className="d-inline-block align-top"
+      height="30"
+      src="logo.png"
+      width="100"
+    />
+     
+  </NavbarBrand>
+</Bootstrap(undefined)>
+`;

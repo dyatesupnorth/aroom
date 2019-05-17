@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<div
+  className="App"
+>
+  <Header />
+  <div
+    className="container pt-3"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-md-4 col-sm-12"
+      >
+        <ConnectFunction />
+      </div>
+      <div
+        className="col-md-8 col-sm-12"
+      >
+        <ConnectFunction />
+      </div>
+    </div>
+  </div>
+</div>
+`;
