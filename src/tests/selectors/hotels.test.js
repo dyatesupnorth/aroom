@@ -11,19 +11,36 @@ test('should filter by star rating', () => {
 })
 
 test('should filter by facilities', () => {
-    const filters = {
+    let filters = {
         text: '',
         starRating: '',
         facilities: ["car park"]
     }
-    const result = selectHotels(hotels, filters);
-    expect(result).toEqual([hotels[0],hotels[1]])
+    let result = selectHotels(hotels, filters);
+    expect(result).toEqual([hotels[0],hotels[1]]);
+
+    filters = {
+        text: '',
+        starRating: 5,
+        facilities: ["pool"]
+    }
+    result = selectHotels(hotels, filters);
+    expect(result).toEqual([hotels[0]]);
+
+    filters = {
+        text: '',
+        starRating: 3,
+        facilities: ["car park", "gym"]
+    }
+    result = selectHotels(hotels, filters);
+    expect(result).toEqual([hotels[1]]);
 })
 
 test('should filter by text search', () => {
     const filters = {
         text: 'hoteltwo',
-        starRating: 3
+        starRating: 3,
+
     }
     const result = selectHotels(hotels, filters);
     expect(result).toEqual([hotels[1]])
