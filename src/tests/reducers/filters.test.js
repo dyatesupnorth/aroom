@@ -9,3 +9,13 @@ test("should setup default filter values", () => {
     facilities: []
   });
 });
+
+test("should set text filter", () => {
+  const text = "hotelone";
+  const action = {
+    type: "SET_TEXT_FILTER",
+    text
+  };
+  const state = filtersReducer(undefined, action);
+  expect(state.text).toBe(text);
+});
