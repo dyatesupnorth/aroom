@@ -8,9 +8,17 @@ import {
 
 export class Filter extends Component {
   state = {
-    availableFacilities: ["car park", "pool", "gym"]
+    availableFacilities: [
+      { id: 1, value: "car park", isChecked: false },
+      { id: 2, value: "pool", isChecked: false },
+      { id: 3, value: "gym", isChecked: false }
+    ],
+    value: []
   };
-
+  unCheck(i) {
+    let ref = "ref_" + i;
+    this.refs[ref].checked = !this.refs[ref].checked;
+  }
   onTextChange = e => {
     this.props.setTextFilter(e.target.value);
     console.log(e.target.value);
@@ -21,15 +29,18 @@ export class Filter extends Component {
     console.log(e.target.value);
   };
 
-  onFacilitiesChange = e => {
-    console.log("​Filter -> e", e.target.checked);
-    //If facility exists and target.checked is false, remove it
+  onFacilitiesChange = (e, i) => {
+    let value = this.state.value.slice();
+    value[i] = e.target.checked;
+    this.setState({ value });
+    console.log("​Filter -> onFacilitiesChange -> e.target.value", e.target.value)
     this.props.setFacilitiesFilter(e.target.value);
- 
+		
   };
 
   renderRadioButtons(maxStarRating) {
-    //TODO: Pull max star rating dervied from max of all hotels
+    // TODO: Pull max star rating dervied from max of all hotels
+    // TODO: Convert to checkboxes, we want to be able to filter based on multiple selections
     let radioButtons = [];
     for (let i = 0; i < maxStarRating; i++) {
       radioButtons.push(
@@ -49,12 +60,14 @@ export class Filter extends Component {
 
   renderCheckBoxes() {
     // TODO: Pull all available facilities directly from available hotels.
-    return this.state.availableFacilities.map((facility, i) => (
+    return this.props.availableFacilities.map((facility, i) => (
       <label key={i}>
         {facility}
         <input
           name={facility}
           value={facility}
+          checked={this.state.value[i]}
+          ref={"ref_" + i}
           type="checkbox"
           onChange={this.onFacilitiesChange}
         />
@@ -62,7 +75,7 @@ export class Filter extends Component {
     ));
   }
 
-  render(props) {
+  render() {
     return (
       this.props.filters && (
         <div style={{ border: "1px solid tomato" }}>
@@ -94,7 +107,15 @@ export class Filter extends Component {
 const mapStateToProps = state => {
   console.log("​state", state);
   return {
-    filters: state.filters
+    filters: state.filters,
+    // Trying to get too fancy!
+    availableFacilities: state.hotels.reduce(
+      (acc, hotel) => (
+        [].push.apply(acc, hotel.facilities.filter(v => acc.indexOf(v) === -1)),
+        acc
+      ),
+      []
+    )
   };
 };
 
@@ -103,7 +124,7 @@ const mapDispatchToProps = dispatch => {
     setTextFilter: text => dispatch(setTextFilter(text)),
     setStarRatingFilter: starRating =>
       dispatch(setStarRatingFilter(starRating)),
-    setFacilitiesFilter: facilities => dispatch(setFacilitiesFilter(facilities))
+    setFacilitiesFilter: facility => dispatch(setFacilitiesFilter(facility))
   };
 };
 export default connect(

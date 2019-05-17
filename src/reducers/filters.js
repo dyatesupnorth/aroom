@@ -1,7 +1,7 @@
 const filtersReducerDefaultState = {
   text: "",
   starRating: "",
-  facilities: ""
+  facilities: []
 };
 export default (state = filtersReducerDefaultState, action) => {
   console.log("​state", state);
@@ -18,12 +18,14 @@ export default (state = filtersReducerDefaultState, action) => {
         starRating: action.starRating
       };
     case "SET_FACILITIES_FILTER":
-      console.log(state.facilities.indexOf(action.facility));
       return state.facilities.indexOf(action.facility) !== -1
         ? // Facility exists, remove it
-          state.facilities.filter(facility => {
-            return facility !== action.facility;
-          })
+          {
+            ...state,
+            facilities: state.facilities.filter(facility => {
+              return facility !== action.facility;
+            })
+          }
         : // Facility does not exist, add it
           {
             ...state,

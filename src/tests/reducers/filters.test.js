@@ -6,7 +6,7 @@ test("should setup default filter values", () => {
   expect(state).toEqual({
     text: "",
     starRating: "",
-    facilities: ""
+    facilities: []  
   });
 });
 
@@ -37,7 +37,7 @@ test("should remove facility if the value already exists ", () => {
     facility
   };
   const state = filtersReducer({ facilities: ["car park"] }, action);
-  expect(state.facilities).toBe(undefined);
+  expect(state.facilities).toEqual([]);
 });
 
 test("should add to facilities if the value doesn't exist ", () => {
@@ -47,5 +47,5 @@ test("should add to facilities if the value doesn't exist ", () => {
     facility
   };
   const state = filtersReducer({ facilities: ["pool", "gym"] }, action);
-  expect(state.facilities).toStrictEqual(["pool", "gym", "car park"]);
+  expect(state.facilities).toEqual(["pool", "gym", "car park"]);
 });
