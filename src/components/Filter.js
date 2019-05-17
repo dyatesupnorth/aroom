@@ -7,7 +7,6 @@ import {
 } from "../actions/filters";
 
 export class Filter extends Component {
-  
   onTextChange = e => {
     this.props.setTextFilter(e.target.value);
   };
@@ -26,15 +25,16 @@ export class Filter extends Component {
     let radioButtons = [];
     for (let i = 0; i < maxStarRating; i++) {
       radioButtons.push(
-        <span key={i}>
+        <label key={i} className="form-check">
           <input
             type="radio"
             value={i + 1}
             name="starRating"
+            className="form-check-input"
             onChange={this.onStarRatingChange}
           />
-          {i + 1}
-        </span>
+          <span className="form-check-label">{i + 1}</span>
+        </label>
       );
     }
     return radioButtons;
@@ -43,14 +43,15 @@ export class Filter extends Component {
   renderCheckBoxes() {
     // TODO: Pull all available facilities directly from available hotels.
     return this.props.availableFacilities.map((facility, i) => (
-      <label key={i}>
-        {facility}
+      <label key={i} className="form-check">
         <input
           name={facility}
           value={facility}
           type="checkbox"
+          className="form-check-input"
           onChange={this.onFacilitiesChange}
         />
+        <span className="form-check-label">{facility}</span>
       </label>
     ));
   }
@@ -58,26 +59,45 @@ export class Filter extends Component {
   render() {
     return (
       this.props.filters && (
-        <div style={{ border: "1px solid tomato" }}>
-          <h1>Filter</h1>
-          <div className="form-group">
-            <label>Name</label>
-            <input
-              className="form-control"
-              name="text"
-              type="text"
-              value={this.props.filters.text}
-              onChange={this.onTextChange}
-            />
-          </div>
-          <div className="form-group">
-            <label>Star Rating</label>
-            {this.renderRadioButtons(5)}
-          </div>
-          <div className="form-group">
-            <label>Facilities</label>
-            {this.renderCheckBoxes()}
-          </div>
+        <div className="card">
+          <article className="card-group-item">
+            <header className="card-header">
+              <h6 className="title">Search by name</h6>
+            </header>
+            <div className="filter-content">
+              <div className="card-body">
+                <div class="form-group ">
+                  <label>Name</label>
+                  <input
+                    className="form-control"
+                    name="text"
+                    type="text"
+                    value={this.props.filters.text}
+                    onChange={this.onTextChange}
+                  />{" "}
+                </div>
+              </div>
+            </div>
+          </article>
+          <article className="card-group-item">
+            <header className="card-header">
+              <h6 className="title">Facilities </h6>
+            </header>
+            <div className="filter-content">
+              <div className="card-body">
+                <form>{this.renderCheckBoxes()}</form>
+              </div>
+            </div>
+          </article>
+
+          <article className="card-group-item">
+            <header className="card-header">
+              <h6 className="title">Minimum star Rating </h6>
+            </header>
+            <div className="filter-content">
+              <div className="card-body">{this.renderRadioButtons(5)}</div>
+            </div>
+          </article>
         </div>
       )
     );
