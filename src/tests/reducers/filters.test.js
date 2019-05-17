@@ -19,3 +19,13 @@ test("should set text filter", () => {
   const state = filtersReducer(undefined, action);
   expect(state.text).toBe(text);
 });
+
+test("should set star rating filter", () => {
+    const starRating = "5";
+    const action = {
+      type: "SET_STAR_RATING_FILTER",
+      starRating
+    };
+    const state = filtersReducer(undefined, action);
+    expect(state.starRating).toBe(starRating);
+  });
