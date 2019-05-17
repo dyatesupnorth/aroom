@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b6a67b95729489636fd903047ba3a0fa",
+    "revision": "7a0721dd5e4cd9e5de1b618263ae8f92",
     "url": "/aroom/index.html"
   },
   {
-    "revision": "3bace1b821d17d5f72ac",
+    "revision": "814b87fe5c7a458ebf14",
     "url": "/aroom/static/css/2.22a7d4ef.chunk.css"
   },
   {
-    "revision": "8aff270b7a5d3a48b615",
+    "revision": "c9c3293b12ecd7f9e5a7",
     "url": "/aroom/static/css/main.515283e2.chunk.css"
   },
   {
-    "revision": "3bace1b821d17d5f72ac",
-    "url": "/aroom/static/js/2.c2905bf6.chunk.js"
+    "revision": "814b87fe5c7a458ebf14",
+    "url": "/aroom/static/js/2.bb5dacf5.chunk.js"
   },
   {
-    "revision": "8aff270b7a5d3a48b615",
-    "url": "/aroom/static/js/main.7e07f852.chunk.js"
+    "revision": "c9c3293b12ecd7f9e5a7",
+    "url": "/aroom/static/js/main.fa18edd5.chunk.js"
   },
   {
     "revision": "89ab78a50cfeb5e74371",
