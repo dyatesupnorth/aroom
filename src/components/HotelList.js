@@ -1,8 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
+import selectHotels from "../selectors/hotels";
 import { HotelListItem } from "./HotelListItem";
 export const HotelList = props => {
-	console.log("​props", props)
+  console.log("​props", props);
   return (
     <div style={{ border: "1px solid tomato" }}>
       {props.hotels.length === 0 ? (
@@ -17,9 +18,8 @@ export const HotelList = props => {
 };
 
 const mapStateToProps = state => {
-	console.log("​state", state)
   return {
-    hotels: state.hotels
+    hotels: selectHotels(state.hotels, state.filters)
   };
 };
 export default connect(

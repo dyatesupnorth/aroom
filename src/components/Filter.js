@@ -7,35 +7,17 @@ import {
 } from "../actions/filters";
 
 export class Filter extends Component {
-  state = {
-    availableFacilities: [
-      { id: 1, value: "car park", isChecked: false },
-      { id: 2, value: "pool", isChecked: false },
-      { id: 3, value: "gym", isChecked: false }
-    ],
-    value: []
-  };
-  unCheck(i) {
-    let ref = "ref_" + i;
-    this.refs[ref].checked = !this.refs[ref].checked;
-  }
+  
   onTextChange = e => {
     this.props.setTextFilter(e.target.value);
-    console.log(e.target.value);
   };
 
   onStarRatingChange = e => {
     this.props.setStarRatingFilter(e.target.value);
-    console.log(e.target.value);
   };
 
   onFacilitiesChange = (e, i) => {
-    let value = this.state.value.slice();
-    value[i] = e.target.checked;
-    this.setState({ value });
-    console.log("​Filter -> onFacilitiesChange -> e.target.value", e.target.value)
     this.props.setFacilitiesFilter(e.target.value);
-		
   };
 
   renderRadioButtons(maxStarRating) {
@@ -66,8 +48,6 @@ export class Filter extends Component {
         <input
           name={facility}
           value={facility}
-          checked={this.state.value[i]}
-          ref={"ref_" + i}
           type="checkbox"
           onChange={this.onFacilitiesChange}
         />
