@@ -44,21 +44,21 @@ test("should set star rating with params", () => {
 });
 
 test("should set facilities without params ", () => {
-  const facilities = [];
-  const action = setFacilitiesFilter(facilities);
+  const facility = "";
+  const action = setFacilitiesFilter(facility);
 
   expect(action).toEqual({
     type: "SET_FACILITIES_FILTER",
-    facilities: []
+    facility
   });
 });
 
 test("should set facilities with params", () => {
-  const facilities = ["car park"];
-  const action = setFacilitiesFilter(facilities);
+  const facility = "car park";
+  const action = setFacilitiesFilter(facility);
 
   expect(action).toEqual({
     type: "SET_FACILITIES_FILTER",
-    facilities
+    facility
   });
 });

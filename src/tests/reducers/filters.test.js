@@ -31,22 +31,21 @@ test("should set star rating filter", () => {
 });
 
 test("should remove facility if the value already exists ", () => {
-  const facilities = "car park";
+  const facility = "car park";
   const action = {
     type: "SET_FACILITIES_FILTER",
-    facilities
+    facility
   };
-  const state = filtersReducer({facilities: ["car park"]}, action);
+  const state = filtersReducer({ facilities: ["car park"] }, action);
   expect(state.facilities).toBe(undefined);
 });
 
-
 test("should add to facilities if the value doesn't exist ", () => {
-  const facilities = "car park";
+  const facility = "car park";
   const action = {
     type: "SET_FACILITIES_FILTER",
-    facilities
+    facility
   };
-  const state = filtersReducer({facilities: ["pool", "gym"]}, action);
+  const state = filtersReducer({ facilities: ["pool", "gym"] }, action);
   expect(state.facilities).toStrictEqual(["pool", "gym", "car park"]);
 });

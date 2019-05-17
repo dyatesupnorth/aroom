@@ -18,16 +18,16 @@ export default (state = filtersReducerDefaultState, action) => {
         starRating: action.starRating
       };
     case "SET_FACILITIES_FILTER":
-      console.log(state.facilities.indexOf(action.facilities));
-      return state.facilities.indexOf(action.facilities) !== -1
+      console.log(state.facilities.indexOf(action.facility));
+      return state.facilities.indexOf(action.facility) !== -1
         ? // Facility exists, remove it
           state.facilities.filter(facility => {
-            return facility !== action.facilities;
+            return facility !== action.facility;
           })
         : // Facility does not exist, add it
           {
             ...state,
-            facilities: [...state.facilities, action.facilities]
+            facilities: [...state.facilities, action.facility]
           };
     default:
       return state;

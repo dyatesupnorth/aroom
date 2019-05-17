@@ -9,7 +9,7 @@ export const setStarRatingFilter = (starRating = "") => ({
 });
 
 
-export const setFacilitiesFilter = (facilities = "") => ({
+export const setFacilitiesFilter = (facility = "") => ({
     type: "SET_FACILITIES_FILTER",
-    facilities
+    facility
   });
