@@ -15,6 +15,11 @@ export default (state = filtersReducerDefaultState, action) => {
         ...state,
         starRating: action.starRating
       };
+    case "SET_FACILITIES_FILTER":
+      return {
+        ...state,
+        facilities: action.facilities
+      };
     default:
       return state;
   }
