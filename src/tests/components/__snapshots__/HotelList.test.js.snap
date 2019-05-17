@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render HotelList correctly 1`] = `
+<div
+  style={
+    Object {
+      "border": "1px solid tomato",
+    }
+  }
+>
+  <HotelListItem
+    facilities={
+      Array [
+        "car park",
+        "pool",
+      ]
+    }
+    key="hotelone"
+    name="hotelone"
+    starRating={5}
+  />
+  <HotelListItem
+    facilities={
+      Array [
+        "car park",
+        "gym",
+      ]
+    }
+    key="hoteltwo"
+    name="hoteltwo"
+    starRating={3}
+  />
+  <HotelListItem
+    facilities={Array []}
+    key="hotelthree"
+    name="hotelthree"
+    starRating={3}
+  />
+</div>
+`;
+
+exports[`should render HotelList with no hotels correctly 1`] = `
+<div
+  style={
+    Object {
+      "border": "1px solid tomato",
+    }
+  }
+>
+  <p>
+    No hotels
+  </p>
+</div>
+`;

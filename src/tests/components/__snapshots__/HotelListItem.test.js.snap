@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render HotelListItem with hotel 1`] = `
+<div
+  style={
+    Object {
+      "border": "1px solid tomato",
+    }
+  }
+>
+  <h2>
+    hotelone
+  </h2>
+  <p>
+    Star rating: 
+    5
+  </p>
+  <p>
+    Facilities:
+    <span
+      key="car park"
+    >
+      car park
+    </span>
+    <span
+      key="pool"
+    >
+      pool
+    </span>
+  </p>
+</div>
+`;
+
+exports[`should render HotelListItem with hotel and no facilities 1`] = `
+<div
+  style={
+    Object {
+      "border": "1px solid tomato",
+    }
+  }
+>
+  <h2 />
+  <p>
+    Star rating: 
+  </p>
+  <p>
+    No facilities
+  </p>
+</div>
+`;

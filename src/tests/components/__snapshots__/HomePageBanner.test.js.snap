@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render HomePageBanner 1`] = `
+<div
+  style={
+    Object {
+      "border": "1px solid tomato",
+    }
+  }
+>
+  <h1>
+    HomePageBanner
+  </h1>
+</div>
+`;

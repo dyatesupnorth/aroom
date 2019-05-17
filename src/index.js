@@ -1,10 +1,34 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
+import configureStore from "./store/configureStore";
+import { startSetHotels } from './actions/hotels';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import { Provider } from "react-redux";
+
+let hasRendered = false;
+const store = configureStore();
+
+const renderApp = () => {
+  if (!hasRendered) {
+    ReactDOM.render(jsx, document.getElementById("root"));
+    hasRendered = true;
+  }
+};
+
+const jsx = (
+  <Provider store={store}>
+    <App />
+  </Provider>
+);
+// TODO... a better loading screen
+ReactDOM.render(<h1>Loading..</h1>, document.getElementById("root"));
+
+store.dispatch(startSetHotels()).then(() => {
+  renderApp();
+});
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
