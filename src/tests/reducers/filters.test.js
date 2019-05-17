@@ -33,7 +33,7 @@ test("should set star rating filter", () => {
 test("should set faciltiies filter", () => {
   const facilities = ["car park"];
   const action = {
-    type: "SET_STAR_RATING_FILTER",
+    type: "SET_FACILITIES_FILTER",
     facilities
   };
   const state = filtersReducer(undefined, action);
