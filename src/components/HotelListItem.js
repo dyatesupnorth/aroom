@@ -3,14 +3,11 @@ import ListGroup from "react-bootstrap/ListGroup";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 export const renderStars = noOfStars => {
-	console.log("​noOfStars", noOfStars)
   let stars = [];
 	
   for (let i = 0; i < noOfStars; i++) {
-		console.log("​i", i)
-    stars.push(<FontAwesomeIcon icon={faStar} />);
+    stars.push(<FontAwesomeIcon key={i} icon={faStar} />);
   }
-  console.log("​stars", stars)
   return stars;
 };
 export const HotelListItem = props => {
