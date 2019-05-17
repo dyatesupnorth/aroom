@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "./logo.png";
 import "./App.css";
 import HotelList from "./components/HotelList";
 import Filter from "./components/Filter";

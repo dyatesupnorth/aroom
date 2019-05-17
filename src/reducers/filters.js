@@ -4,8 +4,6 @@ const filtersReducerDefaultState = {
   facilities: []
 };
 export default (state = filtersReducerDefaultState, action) => {
-  console.log("​state", state);
-  console.log("​action", action);
   switch (action.type) {
     case "SET_TEXT_FILTER":
       return {
