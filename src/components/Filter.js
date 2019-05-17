@@ -1,8 +1,16 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { setTextFilter, setStarRatingFilter } from "../actions/filters";
+import {
+  setTextFilter,
+  setStarRatingFilter,
+  setFacilitiesFilter
+} from "../actions/filters";
 
 export class Filter extends Component {
+  state = {
+    availableFacilities: ["car park", "pool", "gym"]
+  };
+
   onTextChange = e => {
     this.props.setTextFilter(e.target.value);
     console.log(e.target.value);
@@ -17,7 +25,7 @@ export class Filter extends Component {
     let radioButtons = [];
     for (let i = 0; i < maxStarRating; i++) {
       radioButtons.push(
-        <span>
+        <span key={i}>
           <input
             type="radio"
             value={i + 1}
@@ -31,25 +39,44 @@ export class Filter extends Component {
     return radioButtons;
   }
 
-  render() {
+  renderCheckBoxes() {
+    return this.state.availableFacilities.map((facility, i) => (
+      <label key={i}>
+        {facility}
+        <input
+          name={facility}
+          type="checkbox"
+          onChange={this.onFacilitiesChange}
+        />
+      </label>
+    ));
+  }
+
+  render(props) {
     return (
-      <div style={{ border: "1px solid tomato" }}>
-        <h1>Filter</h1>
-        <div className="form-group">
-          <label>Name</label>
-          <input
-            className="form-control"
-            name="text"
-            type="text"
-            value={this.props.filters.text}
-            onChange={this.onTextChange}
-          />
+      this.props.filters && (
+        <div style={{ border: "1px solid tomato" }}>
+          <h1>Filter</h1>
+          <div className="form-group">
+            <label>Name</label>
+            <input
+              className="form-control"
+              name="text"
+              type="text"
+              value={this.props.filters.text}
+              onChange={this.onTextChange}
+            />
+          </div>
+          <div className="form-group">
+            <label>Star Rating</label>
+            {this.renderRadioButtons(5)}
+          </div>
+          <div className="form-group">
+            <label>Facilities</label>
+            {this.renderCheckBoxes()}
+          </div>
         </div>
-        <div className="form-group">
-          <label>Star Rating</label>
-          {this.renderRadioButtons(5)}
-        </div>
-      </div>
+      )
     );
   }
 }
@@ -64,7 +91,9 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     setTextFilter: text => dispatch(setTextFilter(text)),
-    setStarRatingFilter: starRating => dispatch(setStarRatingFilter(starRating))
+    setStarRatingFilter: starRating =>
+      dispatch(setStarRatingFilter(starRating)),
+    setFacilitiesFilter: facilities => dispatch(setFacilitiesFilter(facilities))
   };
 };
 export default connect(

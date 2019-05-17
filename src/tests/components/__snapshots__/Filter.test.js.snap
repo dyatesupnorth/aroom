@@ -1,15 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render Filter 1`] = `
-<div
-  style={
-    Object {
-      "border": "1px solid tomato",
-    }
-  }
->
-  <h1>
-    Filter
-  </h1>
-</div>
-`;
+exports[`should render Filter 1`] = `""`;
