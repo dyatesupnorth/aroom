@@ -10,6 +10,11 @@ export default (state = filtersReducerDefaultState, action) => {
         ...state,
         text: action.text
       };
+    case "SET_STAR_RATING_FILTER":
+      return {
+        ...state,
+        starRating: action.starRating
+      };
     default:
       return state;
   }
