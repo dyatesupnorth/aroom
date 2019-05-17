@@ -66,7 +66,7 @@ export class Filter extends Component {
             </header>
             <div className="filter-content">
               <div className="card-body">
-                <div class="form-group ">
+                <div className="form-group ">
                   <label>Name</label>
                   <input
                     className="form-control"
@@ -105,7 +105,6 @@ export class Filter extends Component {
 }
 
 const mapStateToProps = state => {
-  console.log("​state", state);
   return {
     filters: state.filters,
     // Trying to get too fancy!
