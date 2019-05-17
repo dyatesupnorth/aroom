@@ -13,6 +13,24 @@ export class Filter extends Component {
     console.log(e.target.value);
   };
 
+  renderRadioButtons(maxStarRating) {
+    let radioButtons = [];
+    for (let i = 0; i < maxStarRating; i++) {
+      radioButtons.push(
+        <span>
+          <input
+            type="radio"
+            value={i + 1}
+            name="starRating"
+            onChange={this.onStarRatingChange}
+          />
+          {i + 1}
+        </span>
+      );
+    }
+    return radioButtons;
+  }
+
   render() {
     return (
       <div style={{ border: "1px solid tomato" }}>
@@ -29,41 +47,7 @@ export class Filter extends Component {
         </div>
         <div className="form-group">
           <label>Star Rating</label>
-          <input
-            type="radio"
-            value="1"
-            name="starRating"
-            onChange={this.onStarRatingChange}
-          />{" "}
-          1
-          <input
-            type="radio"
-            value="2"
-            name="starRating"
-            onChange={this.onStarRatingChange}
-          />{" "}
-          2
-          <input
-            type="radio"
-            value="3"
-            name="starRating"
-            onChange={this.onStarRatingChange}
-          />{" "}
-          3
-          <input
-            type="radio"
-            value="4"
-            name="starRating"
-            onChange={this.onStarRatingChange}
-          />{" "}
-          4
-          <input
-            type="radio"
-            value="5"
-            name="starRating"
-            onChange={this.onStarRatingChange}
-          />{" "}
-          5
+          {this.renderRadioButtons(5)}
         </div>
       </div>
     );
