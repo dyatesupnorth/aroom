@@ -3,6 +3,7 @@
 
 Tech test for [Laterooms](https://www.laterooms.com). This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+View it here -> https://dyatesupnorth.github.io/aroom 
 
 ## Color Palette
 ![Alt text](./ui-palette.png "UI Palette")
