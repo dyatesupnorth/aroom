@@ -21,7 +21,15 @@ export class Filter extends Component {
     console.log(e.target.value);
   };
 
+  onFacilitiesChange = e => {
+    console.log("​Filter -> e", e.target.checked);
+    //If facility exists and target.checked is false, remove it
+    this.props.setFacilitiesFilter(e.target.value);
+ 
+  };
+
   renderRadioButtons(maxStarRating) {
+    //TODO: Pull max star rating dervied from max of all hotels
     let radioButtons = [];
     for (let i = 0; i < maxStarRating; i++) {
       radioButtons.push(
@@ -40,11 +48,13 @@ export class Filter extends Component {
   }
 
   renderCheckBoxes() {
+    // TODO: Pull all available facilities directly from available hotels.
     return this.state.availableFacilities.map((facility, i) => (
       <label key={i}>
         {facility}
         <input
           name={facility}
+          value={facility}
           type="checkbox"
           onChange={this.onFacilitiesChange}
         />
