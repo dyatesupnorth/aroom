@@ -30,7 +30,7 @@ test("should set star rating filter", () => {
   expect(state.starRating).toBe(starRating);
 });
 
-test("should set faciltiies filter", () => {
+test("should set facilities filter", () => {
   const facilities = ["car park"];
   const action = {
     type: "SET_FACILITIES_FILTER",
