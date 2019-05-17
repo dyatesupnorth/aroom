@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/aroom/static/css/main.515283e2.chunk.css",
+    "main.js": "/aroom/static/js/main.7e07f852.chunk.js",
+    "main.js.map": "/aroom/static/js/main.7e07f852.chunk.js.map",
+    "runtime~main.js": "/aroom/static/js/runtime~main.978327f8.js",
+    "runtime~main.js.map": "/aroom/static/js/runtime~main.978327f8.js.map",
+    "static/css/2.22a7d4ef.chunk.css": "/aroom/static/css/2.22a7d4ef.chunk.css",
+    "static/js/2.c2905bf6.chunk.js": "/aroom/static/js/2.c2905bf6.chunk.js",
+    "static/js/2.c2905bf6.chunk.js.map": "/aroom/static/js/2.c2905bf6.chunk.js.map",
+    "index.html": "/aroom/index.html",
+    "precache-manifest.bfe41957b37c98979a9176647b49d135.js": "/aroom/precache-manifest.bfe41957b37c98979a9176647b49d135.js",
+    "service-worker.js": "/aroom/service-worker.js",
+    "static/css/2.22a7d4ef.chunk.css.map": "/aroom/static/css/2.22a7d4ef.chunk.css.map",
+    "static/css/main.515283e2.chunk.css.map": "/aroom/static/css/main.515283e2.chunk.css.map",
+    "static/media/logo.png": "/aroom/static/media/logo.090b2dc9.png"
+  }
+}
