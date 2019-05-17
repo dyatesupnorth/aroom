@@ -21,11 +21,21 @@ test("should set text filter", () => {
 });
 
 test("should set star rating filter", () => {
-    const starRating = "5";
-    const action = {
-      type: "SET_STAR_RATING_FILTER",
-      starRating
-    };
-    const state = filtersReducer(undefined, action);
-    expect(state.starRating).toBe(starRating);
-  });
+  const starRating = "5";
+  const action = {
+    type: "SET_STAR_RATING_FILTER",
+    starRating
+  };
+  const state = filtersReducer(undefined, action);
+  expect(state.starRating).toBe(starRating);
+});
+
+test("should set faciltiies filter", () => {
+  const facilities = ["car park"];
+  const action = {
+    type: "SET_STAR_RATING_FILTER",
+    facilities
+  };
+  const state = filtersReducer(undefined, action);
+  expect(state.facilities).toBe(facilities);
+});
