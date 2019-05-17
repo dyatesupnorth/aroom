@@ -5,8 +5,23 @@ exports[`renders without crashing 1`] = `
   className="App"
 >
   <Header />
-  <HomePageBanner />
-  <ConnectFunction />
-  <ConnectFunction />
+  <div
+    className="container pt-3"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-md-4 col-sm-12"
+      >
+        <ConnectFunction />
+      </div>
+      <div
+        className="col-md-8 col-sm-12"
+      >
+        <ConnectFunction />
+      </div>
+    </div>
+  </div>
 </div>
 `;

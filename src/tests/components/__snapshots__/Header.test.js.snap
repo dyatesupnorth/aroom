@@ -1,15 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render Header 1`] = `
-<div
-  style={
-    Object {
-      "border": "1px solid tomato",
-    }
-  }
+<Bootstrap(undefined)
+  bg="dark"
+  expand="lg"
 >
-  <h1>
-    Header
-  </h1>
-</div>
+  <NavbarBrand
+    href="#home"
+  >
+    <img
+      alt="React Bootstrap logo"
+      className="d-inline-block align-top"
+      height="30"
+      src="logo.png"
+      width="100"
+    />
+     
+  </NavbarBrand>
+</Bootstrap(undefined)>
 `;

@@ -1,11 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import "bootstrap/dist/css/bootstrap.css";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
+// Redux bits..
 import configureStore from "./store/configureStore";
-import { startSetHotels } from './actions/hotels';
-
+import { startSetHotels } from "./actions/hotels";
 import { Provider } from "react-redux";
 
 let hasRendered = false;
