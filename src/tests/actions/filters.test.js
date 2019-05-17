@@ -1,4 +1,4 @@
-import { setTextFilter } from "../../actions/filters";
+import { setTextFilter, setStarRatingFilter } from "../../actions/filters";
 
 test("should set text filter without params", () => {
   const action = setTextFilter();
