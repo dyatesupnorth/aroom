@@ -1,4 +1,4 @@
-import { setTextFilter, setStarRatingFilter } from "../../actions/filters";
+import { setTextFilter, setStarRatingFilter, setFacilitiesFilter } from "../../actions/filters";
 
 test("should set text filter without params", () => {
   const action = setTextFilter();
@@ -38,3 +38,23 @@ test("should set star rating with params", () => {
     starRating
   });
 });
+
+test("should set facilities without params ", () => {
+    const facilities = [];
+    const action = setFacilitiesFilter(facilities);
+  
+    expect(action).toEqual({
+      type: "SET_STAR_RATING_FILTER",
+      facilities: []
+    });
+  });
+  
+  test("should set facilities with params", () => {
+    const facilities = ["car park"];
+    const action = setFacilitiesFilter(facilities);
+  
+    expect(action).toEqual({
+      type: "SET_STAR_RATING_FILTER",
+      facilities
+    });
+  });
