@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7a0721dd5e4cd9e5de1b618263ae8f92",
+    "revision": "e5136472f372dce569c25daa27f1e1fa",
     "url": "/aroom/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/aroom/static/css/2.22a7d4ef.chunk.css"
   },
   {
-    "revision": "c9c3293b12ecd7f9e5a7",
+    "revision": "c9aae353c36356d1eb84",
     "url": "/aroom/static/css/main.515283e2.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/aroom/static/js/2.bb5dacf5.chunk.js"
   },
   {
-    "revision": "c9c3293b12ecd7f9e5a7",
-    "url": "/aroom/static/js/main.fa18edd5.chunk.js"
+    "revision": "c9aae353c36356d1eb84",
+    "url": "/aroom/static/js/main.ae7915b9.chunk.js"
   },
   {
     "revision": "89ab78a50cfeb5e74371",
