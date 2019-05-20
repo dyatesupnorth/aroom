@@ -16,7 +16,7 @@ export const hotels = () => [
     starRating: 3,
     facilities: []
   }
-]
+];
 
 export const setHotels = hotels => ({
   type: "SET_HOTELS",
@@ -24,10 +24,7 @@ export const setHotels = hotels => ({
 });
 
 export const startSetHotels = () => {
-
   return dispatch => {
-    return axios.get("http://localhost:3001/hotels").then(res => {
-      return dispatch(setHotels(hotels()));
-    }).catch(error => alert(error.response));
+    return dispatch(setHotels(hotels()));
   };
 };
