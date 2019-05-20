@@ -27,9 +27,8 @@ const jsx = (
 // TODO... a better loading screen
 ReactDOM.render(<h1>Loading..</h1>, document.getElementById("root"));
 
-store.dispatch(startSetHotels()).then(() => {
-  renderApp();
-});
+store.dispatch(startSetHotels());
+renderApp();
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
